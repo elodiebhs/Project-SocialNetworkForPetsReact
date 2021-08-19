@@ -17,6 +17,11 @@ export class Profile extends React.Component {
   componentDidMount() {
     this.loadUserData();
   }
+
+  componentWillUnmount(){
+    this.loadUserData();
+  }
+  
   render() {
     const isLoading = this.state.userData === null ? true : false;
 
