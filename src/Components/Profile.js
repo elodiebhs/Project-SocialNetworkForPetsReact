@@ -8,10 +8,14 @@ export class Profile extends React.Component {
     this.state = { userData: null }
   }
   loadUserData() {
-    this.setState ({ userData: null })
+    this.setState({ userData: null })
     this.fetchID = fetchUserData(this.props.username, (userData) => {
       this.setState({ userData });
     });
+  }
+
+  componentDidMount() {
+    this.loadUserData();
   }
   render() {
     const isLoading = true;
