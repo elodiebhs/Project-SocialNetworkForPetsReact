@@ -23,7 +23,7 @@ export class Profile extends React.Component {
   }
 
   componentDidUpdate(prevProps){
-    if(this.props.UserName !== prevProps.userName) {
+    if(this.props.username !== prevProps.username) {
       cancelFetch(this.fetchID);
       this.loadUserData();
     }
