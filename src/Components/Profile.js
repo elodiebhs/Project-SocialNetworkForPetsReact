@@ -18,10 +18,10 @@ export class Profile extends React.Component {
     this.loadUserData();
   }
   render() {
-    const isLoading = true;
+    const isLoading = this.state.userData === null ? true : false;
 
     let className = 'Profile';
-    if (isLoading) {
+    if (true) {
       className += ' loading';
     }
 
