@@ -7,6 +7,12 @@ export class Profile extends React.Component {
     super(props);
     this.state = { userData: null }
   }
+  loadUserData() {
+    this.setState ({ userData: null })
+    this.fetchID = fetchUserData(this.props.username, (userData) => {
+      this.setState({ userData });
+    });
+  }
   render() {
     const isLoading = true;
 
